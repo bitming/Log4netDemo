@@ -93,11 +93,14 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="CustomPatternLayout.cs" />
+    <Compile Include="CustomPatternLayoutConverter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ILogger.cs" />
     <Compile Include="Log4netErrorLogger.cs" />
+    <Compile Include="LogMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

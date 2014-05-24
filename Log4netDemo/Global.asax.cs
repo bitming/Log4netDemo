@@ -23,11 +23,17 @@ namespace Log4netDemo
 
         protected void Application_Error()
         {
-            var errors = HttpContext.Current.AllErrors;
+            var request = HttpContext.Current.Request;
+            var platform = request.Browser.Platform;
+            var browser = request.Browser.Browser;
+            var company = "Company";
+            var user = "User";
 
+            var errors = HttpContext.Current.AllErrors;
             foreach (var exception in errors)
             {
-                _logger.Write(exception.Message);
+                //_logger.Write(exception.Message);
+                _logger.Write(new LogMessage(exception.Message, platform, browser, company, user));
             }
         }
     }
